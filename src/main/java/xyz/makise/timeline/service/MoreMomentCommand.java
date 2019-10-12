@@ -17,7 +17,7 @@ public class MoreMomentCommand extends Command {
                 lineSum += moment.getContent().length();
             }
         }
-        ArrayList<Moment> moments = momentDao.getMoments();
+        ArrayList<Moment> moments = momentDao.getMoments(pageView.getMomentCount());
         for (Moment moment : moments) {
             moment.setLineCount(moment.getContent().length() / pageView.getWordsPerLine() + 1);
             lineSum += moment.getLineCount();

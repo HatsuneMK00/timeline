@@ -6,6 +6,16 @@ public class PageView {
     private final int lineLimit = 25;
     private int wordsPerLine = 15;
     private boolean isPageOverFlow;
+    private int momentCount = 0;
+
+    public int getMomentCount() {
+        return momentCount;
+    }
+
+    public void setMomentCount(int momentCount) {
+        this.momentCount = momentCount;
+    }
+
     private ArrayList<Moment> moments = new ArrayList<>();
 
     public int getWordsPerLine() {
@@ -42,6 +52,7 @@ public class PageView {
                 "lineLimit=" + lineLimit +
                 ", wordsPerLine=" + wordsPerLine +
                 ", isPageOverFlow=" + isPageOverFlow +
+                ", momentCount=" + momentCount +
                 ", moments=" + moments +
                 '}';
     }
