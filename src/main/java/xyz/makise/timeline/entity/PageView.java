@@ -3,7 +3,7 @@ package xyz.makise.timeline.entity;
 import java.util.ArrayList;
 
 public class PageView {
-    private final int lineLimit = 25;
+    private final int lineLimit = 50;
     private int wordsPerLine = 15;
     private boolean isPageOverFlow;
     private int momentCount = 0;

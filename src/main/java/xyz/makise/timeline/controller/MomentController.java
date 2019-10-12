@@ -26,9 +26,10 @@ public class MomentController {
     @GetMapping("getmore")
     public PageView getMoreMoment(){
         Invoker invoker = new Invoker();
-        Command moreMomentCommand = new MoreMomentCommand();
+        Command moreMomentCommand = (Command) SpringUtil.getBean("moreMomentCommand");
         invoker.setCommand(moreMomentCommand);
         invoker.action(pageView);
+        pageView.setMomentCount(pageView.getMoments().size());
         return pageView;
     }
 

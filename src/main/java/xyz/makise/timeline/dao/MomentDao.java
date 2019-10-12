@@ -13,8 +13,9 @@ import java.util.Random;
 @Mapper
 public interface MomentDao {
 
-    public ArrayList<Moment> getMoments(Integer offset);
+    @Select("select * from moment order by timeStamp limit #{offset},3")
+    ArrayList<Moment> getMoments(Integer offset);
 
     @Insert("insert into moment(author,timeStamp,content,imageUrl) values(#{author},#{timeStamp},#{content},#{imageUrl})")
-    public void addMoment(Moment moment);
+    void addMoment(Moment moment);
 }
