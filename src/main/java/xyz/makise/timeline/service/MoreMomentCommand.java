@@ -14,7 +14,7 @@ public class MoreMomentCommand extends Command {
         if (!pageView.isPageOverFlow()) {
             for (Moment moment : pageView.getMoments()
             ) {
-                lineSum += moment.getContent().length();
+                lineSum += (moment.getContent().length() / pageView.getWordsPerLine() + 1);
             }
         }
         ArrayList<Moment> moments = momentDao.getMoments(pageView.getMomentCount());

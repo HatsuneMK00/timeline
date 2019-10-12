@@ -7,7 +7,8 @@ public class Moment {
     private Timestamp timeStamp;
     private String content;
     private String imageUrl;
-    private int lineCount;
+//    这个属性封装不进数据库
+    private Integer lineCount;
 
     @Override
     public String toString() {

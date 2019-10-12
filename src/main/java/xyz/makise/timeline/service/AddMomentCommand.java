@@ -24,7 +24,7 @@ public class AddMomentCommand extends Command {
         moment.setContent(RandomUtils.getRandomString(random.nextInt(300)));
         moment.setTimeStamp(Timestamp.valueOf(simpleDateFormat.format(new Date())));
         moment.setImageUrl(RandomUtils.getRandomString(16) + ".pnc");
-        moment.setLineCount(moment.getContent().length() / pageView.getWordsPerLine());
+        moment.setLineCount(moment.getContent().length() / pageView.getWordsPerLine() + 1);
         momentDao.addMoment(moment);
     }
 }

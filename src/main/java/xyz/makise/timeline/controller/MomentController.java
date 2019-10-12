@@ -32,6 +32,7 @@ public class MomentController {
         return pageView;
     }
 
+//    随机添加动态
     @GetMapping("addmoment")
     public void addMoment(){
         Invoker invoker = new Invoker();
