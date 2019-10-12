@@ -7,6 +7,7 @@ public class PageView {
     private int wordsPerLine = 15;
     private boolean isPageOverFlow;
     private int momentCount = 0;
+    private ArrayList<Moment> moments = new ArrayList<>();
 
     public int getMomentCount() {
         return momentCount;
@@ -15,8 +16,6 @@ public class PageView {
     public void setMomentCount(int momentCount) {
         this.momentCount = momentCount;
     }
-
-    private ArrayList<Moment> moments = new ArrayList<>();
 
     public int getWordsPerLine() {
         return wordsPerLine;
@@ -42,9 +41,10 @@ public class PageView {
         return moments;
     }
 
-    public void setMoments(ArrayList<Moment> moments) {
-        this.moments = moments;
-    }
+//    这个方法不应该被使用
+//    public void setMoments(ArrayList<Moment> moments) {
+//        this.moments = moments;
+//    }
 
     @Override
     public String toString() {
@@ -60,5 +60,6 @@ public class PageView {
     public void clear(){
         moments.clear();
         isPageOverFlow = false;
+        momentCount = 0;
     }
 }

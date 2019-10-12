@@ -20,6 +20,7 @@ public class MoreMomentCommand extends Command {
                 lineSum += (moment.getContent().length() / pageView.getWordsPerLine() + 1);
             }
         }
+        //        这边采用深拷贝的方式复制moments
         ArrayList<Moment> moments = momentDao.getMoments(pageView.getMomentCount());
         for (Moment moment : moments) {
             moment.setLineCount(moment.getContent().length() / pageView.getWordsPerLine() + 1);
@@ -27,8 +28,9 @@ public class MoreMomentCommand extends Command {
             lineSum += moment.getLineCount();
             pageView.getMoments().add(moment);
         }
-        if (lineSum > pageView.getLineLimit()){
+        if (lineSum > pageView.getLineLimit()) {
             pageView.setPageOverFlow(true);
         }
+        pageView.setMomentCount(pageView.getMoments().size());
     }
 }
