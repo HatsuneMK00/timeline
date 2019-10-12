@@ -10,6 +10,7 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.Random;
 
+@Mapper
 public interface MomentDao {
 
     public ArrayList<Moment> getMoments(Integer offset);

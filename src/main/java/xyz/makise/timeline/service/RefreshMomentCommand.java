@@ -1,7 +1,8 @@
 package xyz.makise.timeline.service;
 
-import xyz.makise.timeline.entity.PageView;
+import org.springframework.stereotype.Component;
 
+@Component
 public class RefreshMomentCommand extends Command {
     @Override
     void execute(Object... objects) {
