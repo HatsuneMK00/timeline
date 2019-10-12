@@ -10,4 +10,10 @@ public class Invoker {
     public void setCommand(Command command) {
         this.command = command;
     }
+
+    public void action(Object... objects) {
+        if (command != null){
+            command.execute(objects);
+        }
+    }
 }
