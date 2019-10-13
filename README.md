@@ -18,17 +18,17 @@
 * 成功保证：返回json格式的数据，返回的数据内容示例：
   ```json
   {
-  "lineLimit": 50, # 手机页面显示行数限制，当内容超过显示限制则提供滚动条，这一项主要用于前端检查，是否有滚动条根据pageOverFlow决定
-  "wordsPerLine": 15, # 手机页面每行显示最大字符数，用于前端检查
-  "momentCount": 3, # 动态数量
-  "moments": [ # 动态列表，每一项为一个动态项
+  "lineLimit": 50, #手机页面显示行数限制，当内容超过显示限制则提供滚动条，这一项主要用于前端检查，是否有滚动条根据pageOverFlow决定
+  "wordsPerLine": 15, #手机页面每行显示最大字符数，用于前端检查
+  "momentCount": 3, #动态数量
+  "moments": [ #动态列表，每一项为一个动态项
     {
-      "author": "AIsirQgq", # 动态作者
-      "timeStamp": "2019-10-12T14:54:42.000+0000", # 动态发布时间
+      "author": "AIsirQgq", #动态作者
+      "timeStamp": "2019-10-12T14:54:42.000+0000", #动态发布时间
       "content": "AIsirQgquGhIX8jLgm5iOBoH78oYusVtYfhP8Th6LLDA1y23foJBDfgHn2BoLjLHU6vbMn375Zz2ESBZKP2tZZZoff4G6kL8eNB8ayqxrUoF1CZBOEfb3tw7EkHw7RXJ5D5JwNd1Rb6C8ciaFBsNDaLPNkXPjCMcgLV1AXN6KRjJpYmhziDzZESCc",
-      # 动态内容
-      "imageUrl": "AIsirQgquGhIX8jL.pnc", # 动态图片url
-      "lineCount": 13 # 动态行数，用于前端检查
+      #动态内容
+      "imageUrl": "AIsirQgquGhIX8jL.pnc", #动态图片url
+      "lineCount": 13 #动态行数，用于前端检查
     },
     {
       "author": "FzGmVIsg",
@@ -45,7 +45,7 @@
       "lineCount": 2
     }
   ],
-  "pageOverFlow": false # 指示是否提供滚动条
+  "pageOverFlow": false #指示是否提供滚动条
 }
   ```
   #### 2）/timeline/addmoment
